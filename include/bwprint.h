@@ -58,31 +58,31 @@ namespace BWP_NAMESPACE {
     // default to stdout
     // print(string_view format-string, args...)
     template<typename... Args> constexpr void print(const std::string_view str_fmt, Args&&... args) {
-        fputs(vformat(str_fmt, make_format_args(args...)).c_str(), stdout);
+        BWP_FMTNS::print(str_fmt, args...);
     }
 
     // send to FILE*
     // print(FILE*, string_view format-string, args...)
     template<typename... Args> constexpr void print(FILE* fdest, const std::string_view str_fmt, Args&&... args) {
-        fputs(vformat(str_fmt, make_format_args(args...)).c_str(), fdest);
+        BWP_FMTNS::print(fdest, str_fmt, args...);
     }
 
     // send to ostream
     // print(ostream, string_view format-string, args...)
     template<typename... Args> constexpr void print(std::ostream & ostream_dest, const std::string_view str_fmt, Args&&... args) {
-        ostream_dest << vformat(str_fmt, make_format_args(args...));
+        BWP_FMTNS::print(ostream_dest, str_fmt, args...);
     }
 
     // no parameter stack cstr
     // print(const char * str)
     void print(const char * str) {
-        fputs(str, stdout);
+        BWP_FMTNS::print(str);
     }
 
     // no parameter stack string
     // print(const string & str)
     void print(const std::string & str) {
-        fputs(str.c_str(), stdout);
+        BWP_FMTNS::print(str);
     }
 }
 
