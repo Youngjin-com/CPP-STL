@@ -7,6 +7,7 @@
 #include <vector>
 #include <iterator>
 #include <random>
+#include <algorithm>
 
 using std::format;
 using std::cout;

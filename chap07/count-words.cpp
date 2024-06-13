@@ -5,6 +5,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <iterator>
 
 using std::format;
 using std::cout;

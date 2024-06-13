@@ -10,6 +10,7 @@
 #include <stdexcept>
 #include <ranges>
 #include <algorithm>
+#include <memory>
 
 using std::format;
 using std::cout;

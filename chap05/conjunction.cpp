@@ -6,6 +6,7 @@
 #include <string>
 #include <functional>
 #include <algorithm>
+#include <iterator>
 
 using std::format;
 using std::cout;

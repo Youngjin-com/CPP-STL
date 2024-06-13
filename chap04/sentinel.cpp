@@ -3,6 +3,7 @@
 
 #include <format>
 #include <iostream>
+#include <vector>
 
 using std::format;
 using std::cout;
