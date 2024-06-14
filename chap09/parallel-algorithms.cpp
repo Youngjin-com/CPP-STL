@@ -1,6 +1,7 @@
 //  parallel-algorithms.cpp
 //  as of 2022-02-25 bw [bw.org]
 
+#include <chrono>
 #include <format>
 #include <iostream>
 #include <vector>
