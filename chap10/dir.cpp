@@ -27,8 +27,7 @@ struct finfo {
 
 template<>
 struct std::formatter<fs::path>: std::formatter<std::string> {
-    template<typename FormatContext>
-    auto format(const fs::path& p, FormatContext& ctx) {
+    auto format(const fs::path& p, std::format_context& ctx) const {
         return format_to(ctx.out(), "{}", p.string());
     }
 };
