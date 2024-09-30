@@ -1,0 +1,389 @@
+Last modified: 20240930
+
+설치:
+    g++ 13 설치하기. ubuntu 22.04 LTS 기준 
+    https://phoenixnap.com/kb/install-gcc-ubuntu
+
+1장 
+    새로운 format 라이브러리로 텍스트를 서식화하기
+    chap01/print-frac.cpp
+    g++ -I ../include/ print-frac.cpp -lfmt
+
+    constexpr로 컴파일 타임에 백터와 문자열을 사용하기
+    na
+
+    서로 다른 타입의 정수를 안전하게 비교하기
+    na
+
+    삼중 비교를 위해 우주선 연산자<=> 사용하기
+    na
+
+    <version> 헤더를 사용하여 기능 시험 매크로를 쉽게 찾기
+    na
+
+    컨셉과 제약조건을 통해 더 안전한 템플릿 만들기
+    na
+
+    모듈을 사용하여 템플릿 라이브러리의 재컴파일을 피하기
+    na
+
+    레인지를 사용하여 컨테이너에 대한 뷰 생성하기 
+    chap01/ranges.cpp ??? 
+    g++ --std=c++20 ranges.cpp 
+
+2장 
+    새로운 span 클래스를 사용하여 C 배열을 안전하게 만들기
+    chap02/span.cpp
+    g++ --std=c++20 span.cpp
+
+    구조적 바인딩을 사용하여 다수의 값을 반환하기
+    chap02/structured-binding.cpp
+    g++ --std=c++20 structured-binding.cpp
+
+    if와 switch문 안에서 변수 초기화하기
+    na
+
+    템플릿 인수 추론을 사용하여 단순성과 명확성을 높이기
+    chap02/template-deduction.cpp
+    g++ --std=c++20 template-deduction.cpp
+
+    if constexpr 문을 사용하여 컴파일 타임 결정을 단순화하기 
+    chap02/constexpr-if.cpp
+    g++ --std=c++20 constexpr-if.cpp
+
+3장 
+    단일 제거 함수를 사용하여 컨테이너의 값들을 제거하기
+    chap03/uniform-erasure.cpp
+    g++ --std=c++20 uniform-erasure.cpp
+
+    정렬되지 않은 벡터에서 상수 시간으로 값들을 제거하기
+    chap03/quick-delete.cpp
+    g++ --std=c++20 quick-delete.cpp
+
+    벡터의 요소들을 직접적이고 안전하게 접근하기
+    chap03/vector-access.cpp
+    g++ --std=c++20 vector-access.cpp 
+
+    벡터의 요소들의 정렬을 유지하기
+    chap03/sorted-vector.cpp
+    g++ --std=c++20 sorted-vector.cpp
+
+    맵에 요소들을 효율적으로 삽입하기
+    chap03/insert-map.cpp
+    g++ --std=c++20 insert-map.cpp
+
+    맵 항목들의 키를 효율적으로 변경하기 
+    chap03/node-swap.cpp
+    g++ --std=c++20 node-swap.cpp
+
+    unordered_map에 사용자 정의 타입의 키를 사용하기
+    chap03/unordered-key.cpp
+    g++ --std=c++20 unordered-key.cpp
+
+    set으로 사용자 입력을 정렬하고 필터링하기
+    chap03/set-words.cpp
+    g++ --std=c++20 set-words.cpp -o set-words
+    echo "a a a b c this that this foo foo foo" | ./set-words
+
+    deque으로 단순한 RPN 계산기 만들기
+    chap03/rpn.cpp
+    g++ --std=c++20 -o rpn rpn.cpp
+    echo "9 6 * 2 3 * +" | ./rpn
+
+    map으로 단어 빈도수 계산기 만들기
+    chap03/word-count.cpp
+    g++ --std=c++20 -o word-count word-count.cpp
+    ./word-count < the-raven.txt
+
+    벡터들의 벡터로 긴 문장들 찾기
+    chap03/sentences.cpp
+    g++ --std=c++20 -o sentences sentences.cpp
+    ./sentences < sentences.txt
+
+    multimap으로 할일 목록 만들기
+    chap03/todo.cpp
+    g++ --std=c++20 todo.cpp
+
+4장 
+    반복 가능한 레인지 생성하기
+    chap04/seq.cpp
+    g++ --std=c++20 seq.cpp
+
+    반복자를 STL 반복자 특성과 호환되게 하기
+    chap04/iterator-traits.cpp
+    g++ --std=c++20 iterator-traits.cpp  
+
+    반복자 어댑터를 사용하여 STL 컨테이너들을 채우기
+    chap04/iterator-adapters.cpp
+    g++ --std=c++20 -o working iterator-adapters.cpp
+    ./working < five-words.txt
+
+    반복자로 생성기 만들기
+    chap04/fib-generator.cpp
+    g++ --std=c++20 fib-generator.cpp
+
+    역방향 반복자 어댑터를 사용하여 역방향으로 반복하기
+    chap04/reverse-iterator.cpp
+    g++ --std=c++20 reverse-iterator.cpp
+
+    센티널을 넣어 길이를 알 수 없는 객체들을 반복하기
+    chap04/sentinel.cpp
+    g++ --std=c++20 sentinel.cpp 
+
+    zip 반복자 어댑터를 만들기
+    chap04/zip-iterator.cpp
+    g++ --std=c++20 zip-iterator.cpp 
+
+    임의 접근 반복자 만들기
+    chap04/container-iterator.cpp
+    g++ --std=c++20 container-iterator.cpp 
+
+5장
+    람다를 사용하여 범위가 지정되고 재사용 가능한 코드 만들기 
+    chap05/lambdas.cpp
+    g++ --std=c++20 lambdas.cpp
+
+    람다를 알고리즘 라이브러리의 서술로 사용하기
+    chap05/algorithm.cpp
+    g++ --std=c++20 algorithm.cpp 
+
+    std::function을 다형적 래퍼로 사용하기
+    chap05/function.cpp
+    g++ --std=c++20 function.cpp
+
+    재귀로 람다를 접합하기
+    chap05/concatenation.cpp
+    g++ --std=c++20 concatenation.cpp
+
+    서술들을 논리적 결합으로 병합하기
+    chap05/conjunction.cpp
+    g++ --std=c++20 -o conjunction conjunction.cpp 
+    echo aabb bbaa foo bar abazb | ./conjunction
+
+    같은 입력으로 여러 람다를 호출하기
+    chap05/braces.cpp
+    g++ --std=c++20 braces.cpp
+
+    맵 기반의 람다를 사용하여 점프 테이블 만들기
+    chap05/jump.cpp
+    g++ --std=c++20 jump.cpp
+
+6장 
+    한 반복자에서 다른 반복자로 복사하기
+    chap06/copy.cpp
+    g++ --std=c++20 copy.cpp 
+
+    컨테이너의 요소들을 문자열로 합치기
+    chap06/join.cpp
+    g++ --std=c++20 join.cpp 
+
+    std:sort로 컨테이너 정렬하기
+    chap06/sort.cpp
+    g++ --std=c++20 sort.cpp
+
+    std::transform으로 컨테이너 변경하기
+    chap06/transform.cpp
+    g++ --std=c++20 transform.cpp
+
+    컨테이너에 있는 아이템들을 찾기
+    chap06/find.cpp
+    g++ --std=c++20 find.cpp
+
+    std::clamp로 컨테이너에 있는 값들을 한정하기
+    chap06/clamp.cpp
+    g++ --std=c++20 clamp.cpp
+
+    std::sample로 데이터 집합의 표본을 추출하기
+    chap06/sample.cpp
+    g++ --std=c++20 sample.cpp
+
+    일련의 데이터로부터 순열 생성하기
+    chap06/permutations.cpp
+    g++ --std=c++20 permutations.cpp
+
+    정렬된 컨테이너들을 합병하기
+    chap06/merge.cpp
+    g++ --std=c++20 merge.cpp
+
+7장
+    string_view 클래스를 경량 문자열 객체로 사용하기
+    chap07/string_view.cpp
+    g++ --std=c++20 string_view.cpp
+
+    문자열들을 접합하기
+    chap07/concatenate.cpp
+    g++ --std=c++20 concatenate.cpp
+    실행하는데 시간이 조금 걸리니 기다릴 것. 약 24s
+
+    문자열들을 변형하기
+    chap07/transform.cpp
+    g++ --std=c++20 transform.cpp 
+
+    C++20의 format 라이브러리로 텍스트 서식화하기
+    chap07/format.cpp
+    g++ --std=c++20 format.cpp
+
+    문자열의 공백 제거하기
+    chap07/trim.cpp
+    g++ --std=c++20 trim.cpp
+
+    사용자 입력으로부터 문자열 읽기
+    chap07/input.cpp
+    g++ --std=c++20 input.cpp -o working
+
+    파일에 있는 단어 수 세기
+    chap07/count-words.cpp
+    g++ --std=c++20 count-words.cpp -o count-words
+
+    파일 입력으로부터 복합 구조를 초기화하기
+    chap07/initstruct.cpp
+    g++ --std=c++20 initstruct.cpp -o initialize-container
+    ./initialize-container < cities.txt
+
+    char_traits로 문자열 클래스 커스터마이징하기
+    chap07/ctraits.cpp
+    g++ --std=c++20 ctraits.cpp
+
+    정규 표현식으로 문자열 파싱하기
+    chap07/regex.cpp
+    g++ --std=c++20 regex.cpp 
+
+8장 
+    std::optional로 선택적 값을 관리하기
+    chap08/optional.cpp
+    g++ --std=c++20 optional.cpp
+
+    타입 안정성을 위해 std::any 사용하기
+    chap08/any.cpp
+    g++ --std=c++20 any.cpp
+
+    std::variant로 서로 다른 타입들을 저장하기
+    chap08/variant.cpp
+    g++ --std=c++20 variant.cpp
+
+    std::chrono로 시간 이벤트 다루기
+    chap08/chrono.cpp
+    g++ --std=c++20 chrono.cpp
+        cout << format("time elapsed: {:.3}\n", milliseconds(secs));
+        cout << format("time elapsed: {:.3}\n", microseconds(secs));
+    두줄이 g++ 13.3에서는 된다. 13.1은 컴파일 오류.    
+
+    가변 튜플을 위한 폴드 표현식 사용하기
+    chap08/tuple.cpp
+    g++ --std=c++20 tuple.cpp
+
+    std::unique_ptr로 할당된 메모리 관리하기
+    chap08/unique_ptr.cpp
+    g++ --std=c++20 unique_ptr.cpp 
+
+    std::shared_ptr로 객체들 공유하기
+    chap08/shared_ptr.cpp
+    g++ --std=c++20 shared_ptr.cpp
+
+    공유된 객체들을 위한 약한 포인터 사용하기
+    chap08/weak_ptr.cpp
+    g++ --std=c++20 weak_ptr.cpp 
+
+    관리 객체의 멤버들을 공유하기
+    chap08/alias_ptr.cpp
+    g++ --std=c++20 alias_ptr.cpp
+
+    난수 엔진을 비교하기
+    chap08/rng.cpp
+    g++ --std=c++20 rng.cpp 
+
+    난수 분포 생성기를 비교하기
+    chap08/distribution.cpp
+    g++ --std=c++20 distribution.cpp
+
+9장
+    특정 시간동안 슬립하기
+    chap09/sleep.cpp
+    g++ --std=c++20 sleep.cpp
+
+    동시성을 위해 std::thread 사용하기
+    chap09/thread.cpp
+    g++ --std=c++20 thread.cpp
+
+    동시성을 위해 std::async 사용하기
+    chap09/async.cpp
+    g++ --std=c++20 async.cpp 
+    MAX_PRIME(0x1FF) 값을 줄여야 결과가 금방 나온다.
+
+    실행 정책에 따라 STL 알고리즘을 병렬로 실행하기
+    chap09/parallel-algorithms.cpp
+    g++ --std=c++20 parallel-algorithms.cpp
+
+    뮤텍스와 잠금으로 데이터를 안전하게 공유하기
+    chap09/mutex.cpp
+    g++ --std=c++20 mutex.cpp
+
+    std::atomic으로 플래그와 값들을 공유하기
+    chap09/atomic.cpp
+    g++ --std=c++20 atomic.cpp
+
+    std::call_once로 스레드들을 초기화하기
+    chap09/call-once.cpp
+    g++ --std=c++20 call-once.cpp
+
+    std::condition_variable을 사용하여 생산자-소비자 문제를 해결하기
+    chap09/producer-consumer.cpp
+    g++ --std=c++20 producer-consumer.cpp
+
+    다수의 생산자와 소비자를 구현하기
+    chap09/multi-producer-consumer.cpp
+    g++ --std=c++20 multi-producer-consumer.cpp
+
+10장
+    path 클래스를 위한 std::formatter 특수화하기
+    chap10/formatter.cpp
+    g++ --std=c++20 formatter.cpp -o formatter
+    ./formatter ./formatter.cpp
+
+    path를 위한 조작 함수들 사용하기
+    chap10/path-ops.cpp
+    g++ --std=c++20 path-ops.cpp 
+
+    디렉터리에 있는 파일 나열하기
+    chap10/dir.cpp
+    g++ --std=c++20 dir.cpp
+
+    grep 유틸리티로 디렉터리와 파일 찾기
+    chap10/bwgrep.cpp
+    g++ --std=c++20 bwgrep.cpp -o bwgrep
+    ./bwgrep using
+
+    regex와 directory_iterator로 파일명 변경하기
+    chap10/rerename.cpp
+    g++ --std=c++20 rerename.cpp -o rerename
+    ./rerename .cpp .cc
+    ./rerename .cc .cpp
+
+    디스크 사용량 카운터 만들기
+    chap10/dir-size.cpp
+    g++ --std=c++20 dir-size.cpp
+
+11장 
+    검색 제안을 위한 trie 클래스 만들기
+    chap11/trie.cpp
+    g++ --std=c++20 trie.cpp
+
+    두 벡터의 오차 합 계산하기
+    chap11/error-sum.cpp
+    g++ --std=c++20 error-sum.cpp
+
+    나만의 split 알고리즘 만들기
+    chap11/split.cpp
+    g++ --std=c++20 split.cpp
+
+    기존의 알고리즘을 레버리지 하는 gather 알고리즘 만들기
+    chap11/gather.cpp
+    g++ --std=c++20 gather.cpp
+
+    연속된 공백 제거하기
+    chap11/delws.cpp
+    g++ --std=c++20 delws.cpp
+
+    숫자를 단어로 변환하기
+    chap11/numword 디렉터리 
+    g++ --std=c++20 numword.h numword.cpp numword-test.cpp
