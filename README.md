@@ -1,6 +1,6 @@
 # 예제로 배우는 C++ STL
 
-<img src="https://www.youngjin.com/images/book_cover/9788931465846.jpg" height="350px" style="border: 2px solid grey;">
+<img src="https://www.youngjin.com/images/book_cover/9788931479409.jpg" height="350px" style="border: 2px solid grey;">
 
 [그림으로 배우는 C Programming 2nd Edition (영진닷컴)](https://blog.naver.com/ydot/222515152463)
 
