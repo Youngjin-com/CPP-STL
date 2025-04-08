@@ -2,7 +2,6 @@
 
 <img src="https://www.youngjin.com/images/book_cover/9788931479409.jpg" height="350px" style="border: 2px solid grey;">
 
-[예제로 배우는 C++ STL (영진닷컴)](https://blog.naver.com/ydot/222515152463)
 
 이 책은 최신 C++20 표준을 기반으로, 표준 템플릿 라이브러리(STL)를 실무에서 효과적으로 활용하는 방법을 안내하는 실전 중심의 활용서입니다. 단순한 문법 설명을 넘어, 실제 개발 환경에서 마주할 수 있는 문제들을 다양한 레시피 형식의 예제를 통해 해결하며, STL의 구조와 작동 방식을 정확하고 체계적으로 설명합니다.
 
